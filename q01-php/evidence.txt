@@ -1,0 +1,26 @@
+[PASS] missing params: "Page 1 of 3"
+[PASS] missing params: 10 posts
+[PASS] missing params: no "Search for"
+[PASS] missing params: no Previous, has Next
+[PASS] page 2: "Page 2 of 3"
+[PASS] page 2: posts 11-20 only
+[PASS] page 2: Previous + Next links
+[PASS] page 3: 5 posts, no Next
+[PASS] bad page (abc) -> valid page, no warning
+[PASS] bad page (-4) -> valid page, no warning
+[PASS] bad page (0) -> valid page, no warning
+[PASS] bad page (array) -> valid page, no warning
+[PASS] page 99: friendly empty message, no fatal
+[PASS] no results: message shown
+[PASS] no results: "Page 1 of 1", zero posts
+[PASS] search "Post 2": 7 posts, one page
+[PASS] pagination links keep the search term
+[PASS] XSS in s is not echoed raw
+[PASS] array-valued s ignored without warning
+[PASS] page 1 (post 5): 2 ad divs numbered 1,2
+[PASS] page 1: no literal [ad] left
+[PASS] page 2 (post 12): 2 ads, none left as text
+[PASS] ad-only paragraph is not wrapped in <p>
+original regex #[ad]# on "a [ad] d": X [XX] X
+
+All checks passed

@@ -1,0 +1,15 @@
+[PASS] invalid email: status invalid
+[PASS] invalid email: no API call, nothing stored
+[PASS] accepted-then-timeout: ends confirmed
+[PASS] accepted-then-timeout: API called twice, ONE record at the service
+[PASS] accepted-then-timeout: both calls used the same normalised email
+[PASS] accepted-then-timeout: waited (backoff) before retry
+[PASS] control (service ignores key): 2 records -> why the key + check-before-retry matter
+[PASS] 429: slept exactly Retry-After (3s) then confirmed
+[PASS] persistent 503: queued, capped at 3 attempts
+[PASS] persistent 503: record kept as pending (not lost)
+[PASS] later retry succeeds: confirmed, one record
+[PASS] 422: invalid, exactly one call, status rejected
+[PASS] double submit (different case): 1 API call, 1 record
+
+All checks passed

@@ -1,0 +1,26 @@
+--- initial load ---
+[PASS] 3 paragraphs, sequence P,P,HR,P
+[PASS] toggle button exists (made by JS) after Hit me
+[PASS] toggle label "Hide image paragraphs"
+--- repeated clicks, images visible ---
+[PASS] 30 clicks: HR pattern correct every time (93 paragraphs)
+[PASS] 30 clicks: each batch holds the 3 originals exactly once
+[PASS] order is randomised (saw 6 different orders of 6 possible)
+[PASS] no HR at the end, none doubled
+[PASS] HR count = floor((n-1)/2)
+[PASS] no duplicate ids / no stray ids
+--- toggle BEFORE adding paragraphs ---
+[PASS] all 31 image paragraphs hidden
+[PASS] non-image paragraphs still visible
+[PASS] label + aria-pressed updated
+[PASS] paragraph count unchanged by toggling; hidden ones remain in DOM
+[PASS] separators unchanged by toggling
+--- add paragraphs WHILE hidden ---
+[PASS] new image paragraphs are hidden too
+[PASS] hidden paragraphs still counted for HR placement
+[PASS] visible = non-image paragraphs only
+--- toggle back, then add while visible ---
+[PASS] all paragraphs visible again
+[PASS] new paragraphs visible while toggle is "show"
+
+All checks passed

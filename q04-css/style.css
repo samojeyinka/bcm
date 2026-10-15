@@ -1,0 +1,47 @@
+/* ============== mobile first: one column until 48em (768px), then three ============== */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font: 1rem/1.5 system-ui, sans-serif; color: #1a1a1a; background: #f3f4f6; }
+
+.layout {
+  display: grid;
+  /* ============== minmax(0,1fr): a long word shrinks the text, not the grid ============== */
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.card {
+  /* ============== grid items may shrink below their content width ============== */
+  min-width: 0;
+  padding: 1rem;
+  background: #fff;
+  border: 2px solid #2b5c9e;
+  border-radius: .5rem;
+}
+.card h2 { margin: 0 0 .5rem; font-size: 1.25rem; overflow-wrap: anywhere; hyphens: auto; }
+.card p  { margin: 0; overflow-wrap: anywhere; }
+
+/* ============== phone: visual order A D B C G, E F H hidden ============== */
+#a { order: 1; }
+#d { order: 2; }
+#b { order: 3; }
+#c { order: 4; }
+#g { order: 5; }
+/* ============== display:none also drops E F H from tab order and screen readers ============== */
+#e, #f, #h { display: none; }
+
+/* ============== desktop: three columns, A spans two, back to DOM order ============== */
+@media (min-width: 48em) {
+  .layout { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 2rem; gap: 1.5rem; }
+  /* ============== same ID specificity as the phone rules, so this wins by source order ============== */
+  #a, #b, #c, #d, #g { order: 0; }
+  #e, #f, #h { display: block; }
+  #a { grid-column: span 2; }
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}

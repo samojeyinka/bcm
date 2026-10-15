@@ -1,0 +1,4 @@
+"original.html":1.1-1.6: error: Start tag seen without seeing a doctype first. Expected “<!DOCTYPE html>”.
+"original.html":2.1-2.6: error: Stray start tag “body”.
+"original.html":2.1-2.6: error fatal: Cannot recover after last error. Any further errors will be ignored.
+"original.html":1.1-1.6: info warning: Consider adding a “lang” attribute to the “html” start tag to declare the language of this document.

@@ -1,0 +1,2 @@
+Command: java -jar node_modules/vnu-jar/build/dist/vnu.jar q05-html/index.html   (Nu Html Checker, the validator.w3.org engine; vnu-jar 25.12.30, the newest release that runs on this machine's Java 11)
+Result: 0 errors, 0 warnings
