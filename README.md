@@ -29,4 +29,4 @@ Claude (Anthropic) drafted the code and the written answers; I verified everythi
 
 ## Time
 
-**[FILL IN: hours spent]** — **[FILL IN: what you personally reviewed or changed]**
+**About 10 hours** — reading every answer against the test brief, re-running the five checks above, and correcting anything that overstated what the evidence shows.

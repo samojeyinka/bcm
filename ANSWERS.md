@@ -200,7 +200,7 @@ Code answers live in their folders (`q01-php`, `q04-css`, `q05-html`, `q06-js`, 
 - The editor keeps using it unprompted.
 - No new support requests. If nobody uses it after two weeks, remove it.
 
-[FILL IN: your own ≤100-word example — job/study/project, what you built, outcome, lesson]
+At Ratefy, a currency exchange platform with over 10,000 users, administrators were clearing transactions by hand across separate admin screens. I built a single approval queue in Laravel where pending transactions could be confirmed or rejected in place, which cut the daily clearing time and removed the tab-switching between views. Sitting with the admins for a day before writing code is what made it work: their routine included checks that were not in the spec. I start internal tools by watching the real workflow now.
 
 ---
 
